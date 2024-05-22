@@ -1,0 +1,298 @@
+div a {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	padding: 1vw;
+}
+.links1 a, .links2 a {
+	text-decoration: none;
+	width: 80px;
+	text-align: center;
+	padding: 0;
+}
+nav a:hover {
+	color: #8bc34a;
+}
+.btn1 {
+	border: none;
+	border-radius: 5px;
+	background: #8bc34a;
+}
+/*div {
+	border: 1px solid black;
+}
+img {
+	border: 1px solid black;
+}*/
+.best {
+	position: relative;
+}
+.img1 {
+	position: absolute;
+	width: 300px;
+	right: 0;
+	bottom: 0;
+	opacity: 0.2;
+}
+.bestpara {
+	font-family: sans-serif;
+	padding: 4px;
+}
+.btn-menu {
+	padding: 30px;
+	background: black;
+}
+
+.btn-menu a {
+	font-size: 20px; 
+	font-weight: bold;
+	color: white;
+	padding: 0;
+}
+.btn-menu a:hover {
+	color: white;
+}
+.btn-menu i { 
+	font-size: 25px;
+	vertical-align: baseline;
+	color: #8bc34a;
+}
+.btn-menu p {
+	display: inline-block;
+	margin-left: 32px;
+
+}
+.btn2, .btn3, .btn4, .btn5 {
+	padding: 30px;
+	border-radius: 5px;
+	background: #333;
+	color: white;
+}
+
+.btn-div {
+	margin-bottom: 20px;
+}
+.heading {
+	text-align: center;
+	margin-top: 90px;
+	font-size: 4vw;
+	font-weight: bold;
+}
+.img2 {
+	margin: auto;
+	display: block;
+	margin-top: 10px;
+}
+.img3 {
+	padding: 20px;
+}
+.img-row {
+	padding: 20px;
+	margin-bottom: 50px;
+}
+.img-row p {
+	text-align: center;
+	padding: 5px;
+	font-size: small;
+	color: gray;
+}
+h6 {
+	text-align: center;
+}
+.i-center {
+	text-align: center;
+}
+.i-text {
+	text-align: center;
+}
+.abs {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.leaf {
+	width: 150px;
+	position: absolute;
+}
+.con2 {
+	padding: 30px;
+	background: #f8f6f3;
+}
+.img-row2 {
+	padding: 80px;
+	background: #f8f6f3;
+}
+.shop {
+	border: none;
+	background: #75aa34;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 5px;
+}
+.shop:hover {
+	background: #8bc34a;
+}
+.card-fluid {
+	padding: 40px;
+	height: 350px;
+	border-radius: 7px;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.c1, .c2, .c3 {
+	background: white;
+	margin-bottom: 30px;
+}
+.cflex {
+	display: flex;
+	justify-content: right;
+}
+.cimg {
+	width: 250px;
+	transform: translate(60px);
+}
+.hd {
+	font-weight: bold;
+	font-size: 30px;
+	padding: 20px;
+	color: white;
+	margin-left: 25px;
+}
+.hdbtn {
+	padding: 10px 30px;
+	background: #75aa34;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-left: 26px;
+}
+.hdbtn i {
+	padding-right: 10px;
+}
+.row-btn {
+	padding: 40px;
+	background: black;
+}
+.hdbtn:hover {
+	background: #8bc34a;
+}
+h4 {
+	text-align: center;
+	background: #f8f6f3;
+	padding: 40px;
+}
+.imgl {
+	transform: scaleX(-1.0);
+	width: 30vw;
+	opacity: 0.2;
+	position: absolute;
+}
+.card {
+	margin-top: 100px;
+	padding: 30px;
+}
+.con3 {
+	padding: 80px;
+	background: #f8f6f3;
+}
+.con3 p {
+	text-align: center;
+	padding: 10px;
+}
+.mila {
+	width: 60px;
+	border-radius: 50%;
+}
+.mtext {
+	text-align: center;
+}
+.mspan {
+	padding-left: 5px;
+}
+.cardi {
+	color: gold;
+}
+.spencer {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+.ip {
+	border-radius: 5px;
+	box-shadow: 0 0 8px 2px rgba(0, 0, 0, 1.0);
+	opacity: 0.7;
+}
+.ipp {
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	color: white;
+	font-weight: bold;
+	font-size: 35px;
+	text-align: center;
+}
+.ippp {
+	position: absolute;
+	top: 50%;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px;
+}
+.ibtn {
+	position: absolute;
+	top: 80%;
+	border-radius: 5px;
+	border: none;
+	padding: 10px 20px;
+	background: #75aa34;
+	color: white;
+	font-weight: bold;
+}
+.ibtn:hover {
+	background: #8bc34a;
+}
+.ilabel {
+	display: flex;
+	justify-content: center;
+}
+.sp {
+	margin-bottom: 100px;
+}
+.bimg {
+	display: block;
+	margin: auto;
+	background: white;
+
+}
+.brand {
+	font-weight: bold;
+	font-size: x-large;
+}
+.quick a {
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	width: 120px;
+	margin: auto;
+	padding: 0;
+	color: grey;
+}
+.quick a:hover {
+	color: white;
+}
+.go {
+	width: 120px;
+	border: 1px solid white;
+	margin-right: 10px;
+}
+.lgo {
+	margin-left: 5px;
+	color: grey;
+}
+.pg {
+	color: grey;
+	margin-left: 30px;
+}
+.lk a {
+	padding: 0;
+}
