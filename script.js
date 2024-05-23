@@ -55,3 +55,53 @@ workBtn.addEventListener("click", () => {
 	aboutDiv.classList.remove("show");
 	mainDiv.classList.remove("hide");
 });
+
+window.addEventListener('wheel', throttle(scrollDirection, 300));
+
+function scrollDirection(e) {
+
+	if(e.wheelDeltaY > 0) {
+
+		if(current === max) {
+			current = 0;
+			dots[current].classList.add("active");
+			dots[current + 3].classList.remove("active");
+		} else {
+			current++;
+			dots[current].classList.add("active");
+			dots[current - 1].classList.remove("active");
+		}
+		slides.forEach((v, i) => {
+			v.style.transform = `translateX( ${100 * (i - current) }% )`;
+		});
+
+	} else {
+
+		if(current === 0) {
+			current = max;
+			dots[current].classList.add("active");
+			dots[current - 3].classList.remove("active");
+		} else {
+			current--;
+			dots[current].classList.add("active");
+			dots[current + 1].classList.remove("active");
+		}
+		slides.forEach((v, i) => {
+			v.style.transform = `translateX( ${100 * (i - current) }% )`;
+		});
+		
+	}
+
+	e.stopImmediatePropagation();
+};
+
+function throttle(func, interval) {
+	let lastCall = 0;
+	return function() {
+		const now = Date.now();
+		if (lastCall + interval < now) {
+			lastCall = now;
+			return func.apply(this, arguments);
+		}
+	};
+}

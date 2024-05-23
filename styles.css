@@ -338,27 +338,27 @@ h1 {
 		gap: 10px;
 	}
 	.text {
-		font-size: 16px;
+		font-size: 11px;
 	}
 	.text a {
 		line-height: 20px;
 	}
 	.text span {
-		width: 5vh;
-		height: 5vh;
+		width: 2.5vh;
+		height: 2.5vh;
 	}
 	.text .span-1 {
 		top: 3vh;
-		left: 3vh;
+		left: 1vh;
 	}
 
 	.text .span-2 {
 		top: 3vh;
-		left: 10vh;
+		left: 4vh;
 	}
 
 	.text .span-3 {
 		top: 3vh;
-		left: 17vh;
+		left: 7vh;
 	}
 }
