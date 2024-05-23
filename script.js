@@ -113,59 +113,58 @@ var xDown = null;
 var yDown = null;
 
 function getTouches(evt) {
-  return evt.touches ||             // browser API
-         evt.originalEvent.touches; // jQuery
-     }                                                     
+	return evt.touches || evt.originalEvent.touches; 
+}
 
-     function handleTouchStart(evt) {
-     	const firstTouch = getTouches(evt)[0];                                      
-     	xDown = firstTouch.clientX;                                      
-     	yDown = firstTouch.clientY;
-     };                                                
-     
-     function handleTouchMove(evt) {
-     	if ( ! xDown || ! yDown ) {
-     		return;
-     	}
+function handleTouchStart(evt) {
+	const firstTouch = getTouches(evt)[0];                                      
+	xDown = firstTouch.clientX;                                      
+	yDown = firstTouch.clientY;
+};                                                
 
-     	var xUp = evt.touches[0].clientX;                                    
-     	var yUp = evt.touches[0].clientY;
+function handleTouchMove(evt) {
+	if ( ! xDown || ! yDown ) {
+		return;
+	}
 
-     	var xDiff = xDown - xUp;
-     	var yDiff = yDown - yUp;
-     	
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-     	if ( xDiff > 0 ) {
-            /* right swipe */ 
-     		if(current === max) {
-     			current = 0;
-     			dots[current].classList.add("active");
-     			dots[current + 3].classList.remove("active");
-     		} else {
-     			current++;
-     			dots[current].classList.add("active");
-     			dots[current - 1].classList.remove("active");
-     		}
-     		slides.forEach((v, i) => {
-     			v.style.transform = `translateX( ${100 * (i - current) }% )`;
-     		});
-     	} else {
-            /* left swipe */
-     		if(current === 0) {
-     			current = max;
-     			dots[current].classList.add("active");
-     			dots[current - 3].classList.remove("active");
-     		} else {
-     			current--;
-     			dots[current].classList.add("active");
-     			dots[current + 1].classList.remove("active");
-     		}
-     		slides.forEach((v, i) => {
-     			v.style.transform = `translateX( ${100 * (i - current) }% )`;
-     		});
-     	}                       
-     }
-    /* reset values */
-     xDown = null;
-     yDown = null;                                             
- };
+	var xUp = evt.touches[0].clientX;                                    
+	var yUp = evt.touches[0].clientY;
+
+	var xDiff = xDown - xUp;
+	var yDiff = yDown - yUp;
+	
+	if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) { 
+		if ( xDiff > 0 ) {
+
+			if(current === max) {
+				current = 0;
+				dots[current].classList.add("active");
+				dots[current + 3].classList.remove("active");
+			} else {
+				current++;
+				dots[current].classList.add("active");
+				dots[current - 1].classList.remove("active");
+			}
+			slides.forEach((v, i) => {
+				v.style.transform = `translateX( ${100 * (i - current) }% )`;
+			});
+		} else {
+
+			if(current === 0) {
+				current = max;
+				dots[current].classList.add("active");
+				dots[current - 3].classList.remove("active");
+			} else {
+				current--;
+				dots[current].classList.add("active");
+				dots[current + 1].classList.remove("active");
+			}
+			slides.forEach((v, i) => {
+				v.style.transform = `translateX( ${100 * (i - current) }% )`;
+			});
+		}                       
+	}
+
+	xDown = null;
+	yDown = null;                                             
+};
